@@ -1,0 +1,61 @@
+{%
+    set cont = 0
+%}
+{%
+    set valor = 0
+%}
+{%
+    set cant = rows | length
+%}
+<!-- Portfolio block BEGIN -->
+
+<div class="portfolio-block content content-center" id="portfolio">
+    <div class="container">
+        <div class="row" style="margin: -55px 0 0 0;">
+            <div class="col-md-6 col-md-offset-3 text-center fh5co-heading animate-box">
+                <h2>GA<strong>LERÍA</strong></h2>
+                <hr class="hr-title hr-center animate-box">
+            </div>
+        </div>
+            {% for row in rows %}
+                {% set cont = cont + 1 %}
+
+                        {% if loop.index == 1 %}
+
+                        <div class="item col-md-3 col-sm-6 col-xs-12 animate-box " id="potfolio-col">
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                    {% endif %}
+                        {% if (loop.index != 1) and (cont != 1) %}
+                                        <div class="item">
+                        {% endif %}
+                                            {% if (cont == 1) and (loop.index != 1) %}
+                                            <div class="item active">
+
+                                            {% endif %}
+                        {{ row.content }}
+                        </div>
+                                    {% if cont == 5 %}
+                                </div>
+                            </div>
+                        </div>
+                        {% if loop.index != cant %}
+
+                        <div class="item col-md-3 col-sm-6 col-xs-12 animate-box " id="potfolio-col">
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    {% endif %}
+                                    {% set cont = 0 %}
+                                    {% endif %}
+
+
+            {% endfor %}
+
+    </div>
+</div>
+
+
+

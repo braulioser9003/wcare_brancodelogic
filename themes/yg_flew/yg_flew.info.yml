@@ -1,0 +1,40 @@
+name: 'YG Flew'
+description: 'A Modern bootstrap theme for a business'
+# core: 8.x
+type: theme
+base theme: classy
+package: 'Bootstrap'
+screenshot: screenshot.png
+
+
+
+regions:
+  navigation: 'Navigation'
+  primary_menu: 'primary_menu'
+  header: 'Top Bar'
+  highlighted: 'Highlighted'
+  logo: 'logo'
+  search: 'Buscar'
+  slider: 'slider'
+  content: 'Content'
+  content_all: 'Contenido Completo'
+  migapan: 'Miga de pan'
+  title_content: 'Titulo del Contenido'
+  sider_content_left: 'Sider content left'
+  sider_content_rigth: 'Sider content rigth'
+  footer: 'About Footer'
+  footer_service: 'Service footer'
+  footer_contact: 'Contact footer'
+  copyright: 'Copyright'
+  
+
+libraries:
+  - yg_flew/global-styling
+  - yg_flew/bootstrap
+
+
+# Information added by Drupal.org packaging script on 2018-03-15
+version: '8.x-1.0-alpha1'
+core: '8.x'
+project: 'yg_flew'
+datestamp: 1521108187

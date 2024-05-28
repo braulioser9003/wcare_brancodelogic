@@ -1,0 +1,13 @@
+<div class="row margin-bottom-40" style="background: #f9f9f9; padding: 26px 0 0 0; margin: 10px 0 34px 0;">
+    <div class="col-md-12 col-sm-12">
+        <h2 style="text-align: center;" class="animate-box">Galería</h2>
+        <div class="owl-carousel owl-carousel4">
+            {% for row in rows %}
+                {{ row.content }}
+            {% endfor %}
+        </div>        
+    </div>
+    <div class="col-md-12" style="text-align: center; margin: 24px 0 0 0;">
+        <a href="/wcare/galeria-de-imagenes" class="btn btn-primary btn-outline with-arrow" style="margin: -18px 0 0px 0;">Ver Todas<i class="icon-arrow-right"></i></a>
+    </div>
+</div>

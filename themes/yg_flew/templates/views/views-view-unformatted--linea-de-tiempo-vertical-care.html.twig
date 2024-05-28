@@ -1,0 +1,29 @@
+<!-- Vertical Timeline -->
+<section id="conference-timeline" style="margin: 0 auto 41px auto;">
+    <div class="timeline-start animate-box">Final</div>
+    <div class="conference-center-line animate-box"></div>
+    <div class="conference-timeline-content">
+        {% for row in rows %}
+            <!-- Article -->
+            <div class="timeline-article">
+                {% if loop.index%2 == 0 %}
+                    <div class="content-right-container">
+                        {{ row.content }}
+                    </div>
+                {% endif %}
+                {% if loop.index%2 != 0 %}
+                    <div class="content-left-container">
+                        {{ row.content }}
+                    </div>
+                {% endif %}
+
+
+            </div>
+            <!-- // Article -->
+
+        {% endfor %}
+
+    </div>
+    <div class="timeline-end animate-box">Inicio</div>
+</section>
+<!-- // Vertical Timeline -->
